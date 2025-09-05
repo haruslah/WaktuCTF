@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+        <link rel="stylesheet" href="style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="navbar">
+        <div class="left">
+            <h1><a href="index.html">WaktuCTF</a></h1>
+        </div>
+        <div class="right">
+            <p><a href="about.html">About</a></p>
+        </div>
+    </div>
+
+    <section class="register">
+        <div class="form-card">
+        <h2>Register for a CTF</h2>
+        <form action="#">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="team">Team:</label>
+            <input type="text" id="team" name="team" placeholder="Enter your team name">
+
+            <label for="ctf">Choose CTF Event:</label>
+            <select id="ctf" name="ctf" required>
+                <option value="">Select CTF</option>
+                <option value="hacktheworld">HackTheWorld CTF</option>
+                <option value="cybernight">CyberNight CTF</option>
+                <option value="midnightpwn">MidnightPwn CTF</option>
+                <option value="rootquest">RootQuest CTF</option>
+                <option value="zeroday">ZeroDay CTF</option>
+                <option value="darkwebwarriors">DarkWeb Warriors CTF</option>
+                <option value="cryptocrack">CryptoCrack CTF</option>
+                <option value="pwnfest">PwnFest CTF</option>
+                <option value="bytebandits">ByteBandits CTF</option>
+                <option value="exploitx">ExploitX CTF</option>
+            </select>
+
+            <label>Experience Level:</label>
+            <div class="checkbox-group">
+            <input type="checkbox" id="beginner" name="experience" value="beginner">
+            <label for="beginner">Beginner</label>
+
+            <input type="checkbox" id="intermediate" name="experience" value="intermediate">
+            <label for="intermediate">Intermediate</label>
+
+            <input type="checkbox" id="advanced" name="experience" value="advanced">
+            <label for="advanced">Advanced</label>
+            </div>
+
+            <label for="notes">Additional Notes:</label>
+            <textarea id="notes" name="notes" rows="4" placeholder="Anything you’d like to add..."></textarea>
+
+            <div class="button-group">
+            <button type="submit">Submit</button>
+            <button type="reset">Clear</button>
+            </div>
+        </form>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
