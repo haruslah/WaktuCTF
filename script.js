@@ -1,3 +1,14 @@
+// Login Guard
+// if a user is logged in and tries to access login.html, redirect them to the main page.
+if (localStorage.getItem("islogin") === "true" && window.location.href.endsWith("login.html")) {
+    window.location.href = "index.html";
+}
+
+// if a user is NOT logged in and tries to access any page other than login.html, redirect them to the login page.
+if (localStorage.getItem("islogin") !== "true" && !window.location.href.endsWith("login.html")) {
+    window.location.href = "login.html";
+}
+
 let isloggedin = false
 
 const login = () => {
@@ -39,17 +50,24 @@ if (localStorage.getItem("islogin") === "true") {
     logoutA.addEventListener("click", (e) => {
         e.preventDefault();
         localStorage.setItem("islogin", "false");
+        // this redirect will be caught by the guard, sending the user to login.html
         window.location.href = "index.html";
     });
     rightDiv.insertBefore(logoutP, about.nextSibling);
     logoutP.appendChild(logoutA);
 
 } else {
-    const p = document.createElement("p");
-    const a = document.createElement("a");
-    a.href = "login.html";
-    a.textContent = "Login"; 
-    p.appendChild(a);
+    // fallback
+    // this is a redundant check, but it's here to ensure
+    // that the "Login" link is only added when the user is not logged in.
+    // it prevents adding a "Login" link to the login page itself.
+    if (!window.location.href.endsWith("login.html")) {
+        const p = document.createElement("p");
+        const a = document.createElement("a");
+        a.href = "login.html";
+        a.textContent = "Login"; 
+        p.appendChild(a);
 
-    rightDiv.insertBefore(p, about);
+        rightDiv.insertBefore(p, about);
+    }
 }
