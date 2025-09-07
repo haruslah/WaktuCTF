@@ -27,7 +27,7 @@ if (localStorage.getItem("islogin") === "true") {
     const profileP = document.createElement("p");
     const profileA = document.createElement("a");
     profileA.href = "profile.html";              
-    profileA.textContent = "profile";    
+    profileA.textContent = "Profile";    
     profileP.appendChild(profileA);
 
     rightDiv.insertBefore(profileP, about);
