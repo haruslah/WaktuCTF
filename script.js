@@ -24,10 +24,22 @@ const login = () => {
             alert("Wrong password");
         }
     }
+
+    else if (username === "admin" || username === "admin@gmail.com") {
+        if (password === "sayasuka123") {
+            isloggedin = true
+            localStorage.setItem("islogin", true);
+            window.location.href = "adminpanel.html";
+        } else {
+            alert("Wrong password");
+        }
+    }
     
     else {
         alert("Username is invalid");
     }
+
+
     return false;
 }
 
@@ -57,7 +69,6 @@ if (localStorage.getItem("islogin") === "true") {
     logoutP.appendChild(logoutA);
 
 } else {
-    // fallback
     // this is a redundant check, but it's here to ensure
     // that the "Login" link is only added when the user is not logged in.
     // it prevents adding a "Login" link to the login page itself.
