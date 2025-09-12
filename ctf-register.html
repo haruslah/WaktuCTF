@@ -22,7 +22,7 @@
     <section class="register">
         <div class="form-card">
         <h2>Register for a CTF</h2>
-        <form action="#">
+        <form id="registerForm" action="#">
             <label for="username">Username:</label>
             <input type="text" id="username" name="username" placeholder="Enter your username" required>
 
@@ -69,6 +69,12 @@
         </form>
         </div>
     </section>
+      <script>
+    // attach event listener to the form
+    document.getElementById("registerForm").addEventListener("submit", function(event) {
+      alert("Registration successful!");
+    });
+  </script>
     <script src="script.js"></script>
 </body>
 </html>
