@@ -48,15 +48,27 @@
             </select>
 
             <label>Experience Level:</label>
-            <div class="checkbox-group">
-            <input type="checkbox" id="beginner" name="experience" value="beginner">
+            <div class="radio-group">
+            <input type="radio" id="beginner" name="experience" value="beginner" required>
             <label for="beginner">Beginner</label>
 
-            <input type="checkbox" id="intermediate" name="experience" value="intermediate">
+            <input type="radio" id="intermediate" name="experience" value="intermediate">
             <label for="intermediate">Intermediate</label>
 
-            <input type="checkbox" id="advanced" name="experience" value="advanced">
+            <input type="radio" id="advanced" name="experience" value="advanced">
             <label for="advanced">Advanced</label>
+            </div>
+
+            <label>Notify Me Via:</label>
+            <div class="checkbox-group">
+            <input type="checkbox" id="email" name="notify" value="email">
+            <label for="beginner">Email</label>
+
+            <input type="checkbox" id="discord" name="notify" value="discord">
+            <label for="intermediate">Discord</label>
+
+            <input type="checkbox" id="whatsapp" name="notify" value="whatsapp">
+            <label for="advanced">Whatsapp</label>
             </div>
 
             <label for="notes">Additional Notes:</label>
