@@ -24,16 +24,6 @@ const login = () => {
             alert("Wrong password");
         }
     }
-
-    else if (username === "admin" || username === "admin@gmail.com") {
-        if (password === "sayasuka123") {
-            isloggedin = true
-            localStorage.setItem("islogin", true);
-            window.location.href = "adminpanel.html";
-        } else {
-            alert("Wrong password");
-        }
-    }
     
     else {
         alert("Username is invalid");
@@ -82,3 +72,4 @@ if (localStorage.getItem("islogin") === "true") {
         rightDiv.insertBefore(p, about);
     }
 }
+
