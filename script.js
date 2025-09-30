@@ -4,8 +4,8 @@ if (localStorage.getItem("islogin") === "true" && window.location.href.endsWith(
     window.location.href = "index.html";
 }
 
-// if a user is NOT logged in and tries to access any page other than login.html, redirect them to the login page.
-if (localStorage.getItem("islogin") !== "true" && !window.location.href.endsWith("login.html")) {
+// if a user is NOT logged in and tries to access any page other than login.html & about.html, redirect them to the login page.
+if (localStorage.getItem("islogin") !== "true" && !window.location.href.endsWith("login.html") && !window.location.href.endsWith("about.html")) {
     window.location.href = "login.html";
 }
 
@@ -19,12 +19,12 @@ const login = () => {
         if (password === "lemong") {
             isloggedin = true
             localStorage.setItem("islogin", true);
-            window.location.href = "index.html";
+            window.location.href = "profile.html";
         } else {
             alert("Wrong password");
         }
     }
-    
+
     else {
         alert("Username is invalid");
     }
@@ -72,4 +72,3 @@ if (localStorage.getItem("islogin") === "true") {
         rightDiv.insertBefore(p, about);
     }
 }
-
